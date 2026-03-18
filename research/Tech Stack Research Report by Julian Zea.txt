@@ -1,0 +1,75 @@
+﻿Julian Zea
+2/18/2026
+Professor Butler
+MGIS 360
+
+
+Tech Stack Research Report: Mobile Application Frameworks
+
+
+Executive Summary
+Our business, AYS(Are You Sure?), relies on mobile application to deliver its core value proposition, which is active behavioral intervention to prevent impulsive spending. Unlike a regular passive budgeting app, AYS must live in the user’s phone to send real time notifications and intervene at the point of sale.
+For this research, I researched cross platform development frameworks. These tools let us write code once and deploy it to both IOS and android devices. This is important for our startup because we don’t have a budget for a team dedicated to both IOS and Android.
+I researched the two industry leaders in this space: React Native and Flutter
+
+
+Tool Research
+Option A: React Native
+What it is: React Native is an open source mobile application framework created by Meta. It allows developers to use JavaScript and React to build mobile apps. Unlike hybrid apps that show a website inside an app shell, React Native uses native UI components, making the app feel like a standard or android app. It is used by companies like Instagram, Discord, and Pinterest
+Evaluation Criteria: 
+* Developer Availability: It is High. JavaScript is the most popular programming language in the world. It will be easier to find open sourced libraries.
+* Integration: AYS connect to banking APIs and require deep access to push notifications. React Native has a big ecosystem of pre built packages for these specific features
+* Learning Curve: It is moderate. Since many web developers already know React, the transition portion to mobile should be smooth
+Pros: 
+* We can share 90% of codes between iOS and Android
+* Fast updates: Developers can see changes instantly without rebuilding app which speed things up
+* Ecosystem: Because it has been around longer than Flutter, almost every problem has been solved by someone else in the community
+Cons: 
+* React Native relies on the communication bridge between JavaScript and Phone’s hardware. This can cause problem with animations
+* Upgrade difficulties: Updating React Native to newer versions is widely known to be difficult
+* Native Modules: Sometimes for a specific features, we might need to write some codes
+Fit for the Project: This is a high fit, React Native is ideal for AYS because our app is logic heavy than graphic heavy. The financial libraries makes it a strong contender
+
+
+Option B: Flutter
+What it is: Flutter is a UI toolkit created by Google. Instead of using JavaScript. It uses a programming language called Dart. Unlike React Native, which uses Phone’s native UI components, Flutter draws from every pixel on the screen itself using Skia. It is used by companies like Google Pay, BMW, and eBay.
+Evaluation Criteria for AYS: 
+* Performance: Good, because it complies to native code and draw its own pixels, it is generally speaking faster and smoother than React Native
+* UI Consistency: Since Flutter doesn’t rely on phone’s native buttons, the app look exactly the same on an old android phone as it does on a new iPhone
+* Learning Curve: Pretty steep, our team would have to learn Dart, a language not widely used outside of Flutter
+Pros:
+* Good UI widgets: Flutter comes with a library of pre-made widgets that makes it look professional out of the box. This would be great for our spending dashboard
+* Performance: 
+Cons:
+* The Dart Language: Knowing someone who know Dark is harder than knowing someone who knows JavaScript
+* File Size: Flutter apps are usually larger in file size than React Native apps, which might not be pleasing to users with older phones
+* Platform aesthetic: Because it draws its own pixel, it can be uncanny, like a native app but slightly different, which could confuse non tech savvy users.
+Fit for the Project: It is Medium fit, While Flutter would make AYS look good, the requirements to learn a new language is a big barrier for a short term student project
+
+
+Recommendation
+My recommendation: React Native
+Reason I chose React Native: Based on my research, I recommend the team adopt React Native for AYS mobile application 
+1. Talent Pool: A big factor is the programming language. React Native uses JavaScript. If my teammates are researching web frameworks or backend environments, they are usually using JavaScript. Choosing React Native allows our team to use a single language across our tech stack, significantly reducing cognitive load and development time
+2. Ecosystem: AYS requires specific, secure integration with banking platforms and notification services. React Native has a more mature library ecosystem for these third party integrations compared to Flutter.
+3. Speed to Minimum Viable Product: For a MVP, we need to set up fast. The amount of resources and kits available for React Native will allow us to reach our goal faster than learning Dart.
+Limitations: By choosing React native, we do accept that performance might not be that smooth as with Flutter, especially if we want to add complex animations. We do accept the risk of upgrading the framework later will be time consuming. However, for a text and notification based app, these tradeoffs are miniscule in exchange for faster development speed.
+Integration Context: This choice supports the rest of the team’s research. If the backend researcher selects Node.js , we can share logic between mobile app and server. If the CMS researcher chooses a headless CMS, React Native connects to APIs easily via standard JSON, making data fetch more efficient.
+
+
+
+
+AI Process Log
+Conversation Excerpt 1: Defining the Scope
+* Prompt: "I need to research tech tools for a startup called AYS that stops impulse buying. Which specific category should I research if I want the easiest topic to write 3 pages about?"
+* Insight: The AI suggested researching "Mobile App Frameworks" specifically focusing on Cross-Platform Development. It explained that since AYS is a mobile-first product, comparing React Native vs. Flutter would provide ample material regarding cost, performance, and team capability without requiring deep coding knowledge.
+Conversation Excerpt 2: Clarifying the "Intervention" Feature
+* Prompt: "How do these frameworks handle the 'intervention' part of our app? We need to block spending or send notifications."
+* Insight: The AI explained that neither framework can easily "block" other apps (like Amazon) due to OS sandboxing. However, it clarified that React Native handles Push Notifications and Background Processes well through "bridges" to native code. This helped me refine my "Evaluation Criteria" to focus on notification handling rather than "app blocking" which is technically infeasible.
+Decision Point (Accepted): Choosing Cross-Platform over Native
+* AI Recommendation: The AI initially offered a comparison between Swift (iOS) and React Native.
+* My Decision: I accepted the logic that for a student startup, building two separate apps (Native) is impossible. I decided to pivot the research entirely to Cross-Platform (React Native vs. Flutter) to reflect the budget constraints of our project.
+Refinement
+* AI Suggestion: The AI suggested that Flutter might be better because it has "better performance and widgets" for financial charts.
+* My Pushback: I argued that our team are beginners who know know little to none basic JavaScript
+* Refinement: The AI acknowledges this constraint and helped me rewrite recommendation section to prioritize JavaScript familiarity over performance, making React Native the clear winner.
