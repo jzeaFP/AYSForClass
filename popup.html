@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AYS Funding - Smart Saver</title>
+    <style>
+      :root {
+        --bg-dark: #0f172a;
+        --card-bg: #1e293b;
+        --primary-blue: #3b82f6;
+        --accent-green: #10b981;
+        --danger-red: #ef4444;
+        --text-main: #f8fafc;
+        --text-dim: #94a3b8;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: var(--bg-dark);
+        color: var(--text-main);
+        margin: 0;
+        padding: 16px;
+        width: 320px;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .logo {
+        font-weight: 800;
+        color: var(--primary-blue);
+        letter-spacing: 1px;
+      }
+
+      .card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .input-label {
+        color: var(--text-dim);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 8px;
+        text-align: left;
+      }
+
+      input[type="number"] {
+        width: 100%;
+        background: var(--bg-dark);
+        border: 1px solid var(--text-dim);
+        color: var(--text-main);
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        transition: 0.3s;
+      }
+
+      .btn-primary {
+        background: var(--primary-blue);
+        color: white;
+      }
+      .btn-primary:hover {
+        background: #2563eb;
+      }
+
+      #status-msg {
+        font-size: 0.75rem;
+        color: var(--accent-green);
+        margin-top: 10px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">AYS FUNDING</div>
+    </div>
+
+    <div id="main-screen">
+      <div class="card">
+        <label class="input-label">Weekly Spending Limit</label>
+        <input
+          type="number"
+          id="budget-input"
+          placeholder="Enter amount (e.g. 50)"
+        />
+
+        <button id="save-btn" class="btn btn-primary">SAVE BUDGET</button>
+        <div id="status-msg">✓ Limit updated successfully</div>
+
+        <hr style="border: 0; border-top: 1px solid #334155; margin: 20px 0" />
+
+        <div
+          id="timer-display"
+          style="font-size: 0.75rem; color: var(--text-dim)"
+        >
+          Universal Shopping Protector Active 🛡️
+        </div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
