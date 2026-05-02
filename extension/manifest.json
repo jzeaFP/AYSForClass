@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "AYS Funding: Nudge Prototype",
+  "version": "1.0",
+  "description": "Behavioral intervention for impulsive spending demo.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": []
+}
