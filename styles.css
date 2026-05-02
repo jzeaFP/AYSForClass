@@ -1,0 +1,96 @@
+/* The dim background overlay */
+#ays-speed-bump {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* The white modal box */
+.ays-modal {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  animation: ays-pop 0.3s ease-out;
+}
+
+@keyframes ays-pop {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.ays-modal h1 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: #1a1a1a;
+}
+
+.ays-budget-box {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+/* Red theme if over budget, Blue if under */
+.ays-over {
+  background: #fff5f5;
+  border: 1px solid #feb2b2;
+  color: #c53030;
+}
+.ays-under {
+  background: #f0f9ff;
+  border: 1px solid #bee3f8;
+  color: #2b6cb0;
+}
+
+.ays-btn-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.ays-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  border: none;
+}
+
+#ays-cancel {
+  background: #edf2f7;
+  color: #4a5568;
+}
+#ays-cancel:hover {
+  background: #e2e8f0;
+}
+
+#ays-continue {
+  background: #3182ce;
+  color: white;
+}
+#ays-continue:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

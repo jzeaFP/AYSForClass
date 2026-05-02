@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "AYS Funding Extension",
+  "version": "1.0",
+  "description": "Stop impulse buys with a universal speed bump.",
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
